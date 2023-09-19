@@ -74,16 +74,16 @@ final public class QOICoder {
     public class func convert(from png: CGImage) -> Data? {
         let (pixels, width, height) = png.pixelValues()
         var desc = qoi_desc(width: UInt32(width), height: UInt32(height), channels: 4, colorspace: 0)
-        guard let pixels = pixels,
-              let pointer = Data(pixels).withUnsafeBytes({ $0.baseAddress }) else { return nil }
+        guard let temp_pixels = pixels,
+              let pointer = Data(pixels!).withUnsafeBytes({ $0.baseAddress }) else { return nil }
         var size: Int32 = 0
         let encoded = qoi_encode(pointer, &desc, &size)
         defer {
             encoded?.deallocate()
         }
         guard size != 0,
-              let encoded = encoded else { return nil }
-        return Data(bytes: encoded, count: Int(size))
+              let temp_encoded = encoded else { return nil }
+        return Data(bytes: encoded!, count: Int(size))
     }
 }
 
