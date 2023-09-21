@@ -13,7 +13,7 @@ import SQOI
  */
 final public class QOICoder {
 
-    public class func decode(from url: URL, channels: UInt8 = 4, format: CIFormat = .RGBA8) throws -> CIImage? {
+    /*public class func decode(from url: URL, channels: UInt8 = 4, format: CIFormat = .RGBA8) throws -> CIImage? {
         do {
             let data = try Data(contentsOf: url)
             return decode(from: data, channels: channels, format: format)
@@ -143,5 +143,5 @@ private extension Data {
     
     var bytes: [UInt8] {
         [UInt8](self)
-    }
+    }*/
 }

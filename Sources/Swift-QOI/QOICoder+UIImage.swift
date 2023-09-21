@@ -7,7 +7,7 @@
 
 #if canImport(UIKit)
 import UIKit
-
+/*
 public extension QOICoder {
     
     class func convert(from png: UIImage) -> Data? {
@@ -40,5 +40,5 @@ public extension UIImage {
     }
     
 }
-
+*/
 #endif

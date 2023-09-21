@@ -7,7 +7,7 @@
 
 #if canImport(AppKit)
 import AppKit
-
+/*
 private extension NSImage {
     
     convenience init(ciImage: CIImage) {
@@ -50,5 +50,5 @@ public extension NSImage {
     }
     
 }
-
+*/
 #endif
